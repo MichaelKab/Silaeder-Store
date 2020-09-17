@@ -1,0 +1,4 @@
+﻿.fist_db
+.db
+/website/migrations
+/website/__pycache__
