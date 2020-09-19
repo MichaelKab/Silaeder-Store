@@ -1,8 +1,0 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-.idea
-**.sqlite3
-/website/migrations
-/website/__pycache__
-/Silaeder_Store/__pycache__
