@@ -1,4 +1,4 @@
 **.sqlite3
-/idea
+/idea/
 /website/migrations
 /website/__pycache__/
