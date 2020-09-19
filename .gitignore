@@ -1,4 +1,4 @@
-﻿.fist_db
-.db
+﻿*.sqlite3
 /website/migrations
 /website/__pycache__
+/Silaeder_Store/__pycache__

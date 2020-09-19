@@ -1,5 +1,16 @@
 from django.db import models
+from django.conf import settings
+from django.contrib.auth.models import AbstractUser
+
 # Create your models here.
+class CustomUser(AbstractUser):
+    #first_name = models.CharField(max_length=30, blank=True)
+    #last_name = models.CharField(max_length=30, blank=True)
+    is_active = models.BooleanField(default=True)
+    something = models.CharField(max_length=30, default=0)
+#    def __str__(self):
+#        return self.something
+
 class UserData(models.Model):
     user_id = models.IntegerField(default=0, unique= True)
     username = models.CharField(max_length=30)
@@ -26,4 +37,13 @@ class Product(models.Model):
     quantity = models.SmallIntegerField(default=0)
     buyers = models.ManyToManyField(UserData)
     def __str__(self):
-        return '''Название:{}Описание:{}  Кол-во:{}'''.format(self.name_product, self.description_product, self.quantity)
+        return "Название:{}Описание:{}  Кол-во:{}".format(self.name_product, self.description_product, self.quantity)
+
+class Session_log(models.Model):
+    id_user = models.ForeignKey(UserData, on_delete=models.CASCADE)
+    required_days = models.CharField(max_length=16)
+    time_start = models.SmallIntegerField(default=0)
+    exception_days = models.CharField(max_length=120)
+    def __str__(self):
+        return "ID:{}  Обязательные дни:{}  Начало уроков:{}".format(self.id_user.user_id, self.required_days, self.time_start)
+
