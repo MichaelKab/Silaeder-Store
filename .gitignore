@@ -1,4 +1,5 @@
-*.sqlite3
-/idea/
-/website/migrations
-/website/__pycache__/
+﻿*.sqlite3
+db.sqlite3
+/.idea/
+/website/migrations/__pycache__/
+*.pyc

@@ -10,7 +10,7 @@ class CustomUserAdmin(UserAdmin):
     form = CustomUserChangeForm
     model = CustomUser
 
-admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(CustomUser)
 admin.site.register(UserData)
 admin.site.register(Transaction)
 admin.site.register(Product)
