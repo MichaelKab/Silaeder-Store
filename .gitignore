@@ -1,5 +1,4 @@
 ﻿*.sqlite3
-db.sqlite3
 /.idea/
+.idea/misc.xml
 /website/migrations/__pycache__/
-*.pyc
