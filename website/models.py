@@ -8,6 +8,10 @@ class CustomUser(AbstractUser):
     #last_name = models.CharField(max_length=30, blank=True)
     is_active = models.BooleanField(default=True)
     something = models.CharField(max_length=30, default=0)
+
+    def save(self, *args, **kwargs):
+        super(User, self).save(*args, **kwargs)
+        return self
 #    def __str__(self):
 #        return self.something
 
