@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
+import datetime
+from django.http import Http404
 '''
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
@@ -22,5 +25,26 @@ class UserViewSet(viewsets.ViewSet):
         serializer = UserSerializer(user)
         return Response(serializer.data)
 '''
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def Main(request):
+    html = "<html><body> Страница </body></html>"
+    return HttpResponse(html)
+
+def UserData_v(request, ID):
+    UserData = Session_log.objects.get(user_id=ID)
+    html = "<html><body>{}</body></html>".format(UserData)
+    return UserData
+
+def Transaction_v(request, ID):
+    Transaction = Session_log.objects.get(id_user=ID)
+    html = "<html><body>{}</body></html>".format(Transaction)
+    return Transaction
+
+def Product_v(request, ID):
+    Product = Session_log.objects.get(name_product=ID)
+    html = "<html><body>{}</body></html>".format(Product)
+    return Product
+
+def Session_log_v(request, ID):
+    session = Session_log.objects.get(id_user =ID )
+    html = "<html><body>{}</body></html>".format(session)
+    return session

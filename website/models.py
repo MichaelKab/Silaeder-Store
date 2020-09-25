@@ -4,16 +4,8 @@ from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 class CustomUser(AbstractUser):
-    #first_name = models.CharField(max_length=30, blank=True)
-    #last_name = models.CharField(max_length=30, blank=True)
-    is_active = models.BooleanField(default=True)
-    something = models.CharField(max_length=30, default=0)
-
-    def save(self, *args, **kwargs):
-        super(User, self).save(*args, **kwargs)
-        return self
-#    def __str__(self):
-#        return self.something
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
 
 class UserData(models.Model):
     user_id = models.IntegerField(default=0, unique= True)
@@ -50,4 +42,3 @@ class Session_log(models.Model):
     exception_days = models.CharField(max_length=120)
     def __str__(self):
         return "ID:{}  Обязательные дни:{}  Начало уроков:{}".format(self.id_user.user_id, self.required_days, self.time_start)
-
