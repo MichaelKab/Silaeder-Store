@@ -39,7 +39,8 @@ class Product(models.Model):
     def __str__(self):
         return "Название:{} Описание:{}  Кол-во:{}".format(self.name_product, self.description_product, self.quantity)
 
-class Session_log(models.Model):
+
+class SessionLog(models.Model):
     id_user = models.ForeignKey(UserData, on_delete=models.CASCADE)
     required_days = models.CharField(max_length=16)
     time_start = models.SmallIntegerField(default=0)
