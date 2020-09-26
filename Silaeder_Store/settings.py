@@ -25,18 +25,19 @@ SECRET_KEY = '=z653aj2!gy^@z36d$$ab+2+oq6+pvw5fslbi-&fwxy80ge*@^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["450d6385461a.ngrok.io","127.0.0.1"]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
 INSTALLED_APPS = [
-    'website.apps.WebsiteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'website.apps.WebsiteConfig',
 ]
 AUTH_USER_MODEL = 'website.CustomUser'
 
@@ -118,6 +119,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+DRF_HTML_RENDERER_ENABLED = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
