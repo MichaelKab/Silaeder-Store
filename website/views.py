@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from rest_framework.viewsets import ModelViewSet
 
-from website.models import Product, UserData
+from website.models import Product
 from website.serializers import ProductSerializer
 
 
