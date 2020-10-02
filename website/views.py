@@ -1,8 +1,7 @@
 from django.http import HttpResponse
 from rest_framework.viewsets import ModelViewSet
 
-from website.models import Product
-from website.serializers import ProductSerializer
+from website.serializers import *
 
 
 def main(request):
@@ -13,3 +12,18 @@ def main(request):
 class ProductsViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+
+class CustomSerializer(ModelViewSet):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomSerializer
+
+
+class SchoolViewSet(ModelViewSet):
+    queryset = SchoolAttend.objects.all()
+    serializer_class = SchoolAttendSerializer
+
+
+class TransactionViewSet(ModelViewSet):
+    queryset = Transaction.objects.all()
+    serializer_class = TransactionSerializer
