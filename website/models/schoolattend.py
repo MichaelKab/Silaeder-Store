@@ -9,5 +9,5 @@ class SchoolAttend(models.Model):
     exception_days = models.CharField(max_length=120)
 
     def __str__(self):
-        return "ID:{}  Обязательные дни:{}  Начало уроков:{}".format(self.id_user.user_id, self.required_days,
+        return "ID:{}  Обязательные дни:{}  Начало уроков:{}".format(self.id_user.id, self.required_days,
                                                                      self.time_start)

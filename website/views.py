@@ -6,7 +6,7 @@ from website.models import Product, CustomUser, SchoolAttend, Transaction
 
 
 def main(request):
-    html = "<html><body> Страница{}</body></html>"
+    html = "<html><body> Страница</body></html>"
     return HttpResponse(html)
 
 

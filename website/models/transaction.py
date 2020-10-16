@@ -9,4 +9,4 @@ class Transaction(models.Model):
     date = models.DateTimeField()
 
     def __str__(self):
-        return "ID:{}  Кол-во:{}  Дата:{}".format(self.id_user.user_id, self.cash, self.date)
+        return "ID:{}  Кол-во:{}  Дата:{}".format(self.id_user.id, self.cash, self.date)
