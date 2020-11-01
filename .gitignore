@@ -1,3 +1,4 @@
 ﻿*.sqlite3
 /.idea/
 /website/migrations/__pycache__/
+/node_modules/
