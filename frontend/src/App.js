@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState, useEffect} from "react"
 import axios from "axios"
-/*
+
 function Get_data() {
         const[people, setPeople] = useState([])
         useEffect(() => {
@@ -13,7 +13,7 @@ function Get_data() {
             })
         }, [])
         return {people}
-}*/
+}
 
 function App(){
     const[text, setText] = useState([])
